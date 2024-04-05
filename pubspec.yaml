@@ -33,7 +33,7 @@ dependencies:
     sdk: flutter
   flutter_svg: ^2.0.10+1
   go_router: ^13.2.2
-  persistent_bottom_nav_bar_v2: ^5.2.0
+  google_nav_bar: ^5.0.6
 
 dev_dependencies:
   flutter_lints: ^3.0.0
@@ -73,4 +73,3 @@ flutter:
     - family: Poppins-Regular
       fonts:
         - asset: assets/fonts/Poppins-Regular.ttf
-    
