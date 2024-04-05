@@ -8,7 +8,7 @@ class LoginRegisterW extends StatefulWidget {
       {super.key,
       required this.formTitle,
       required this.buttonText,
-      required this.subButtonText,
+      this.subButtonText = '',
       required this.isRegister,
       this.buttonColor = Colors.blue,
       required this.emailController,
@@ -26,7 +26,7 @@ class LoginRegisterW extends StatefulWidget {
   final Function() thirdTextOnPressed;
   final String actionText;
   final String buttonText;
-  final String subButtonText;
+  final String? subButtonText;
   final Function() onPressed;
   final Function()? forgetPasswordOnPressed;
   final bool isRegister;

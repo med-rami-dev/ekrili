@@ -61,7 +61,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
         onFieldSubmitted: widget.onSubmitted,
         onChanged: (value) {
           setState(() {
-            isEditing = true;
+            isEditing = value.isNotEmpty;
           });
         },
         decoration: InputDecoration(

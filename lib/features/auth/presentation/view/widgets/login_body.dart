@@ -26,7 +26,7 @@ class LoginViewBodyW extends StatelessWidget {
                   SizedBox(height: ScreenSize.screenHeight * 0.15),
                   LoginRegisterW(
                     formTitle: 'Login',
-                    buttonText: 'Login',
+                    buttonText: 'Sign In',
                     subButtonText: 'Forget Password?',
                     isRegister: false,
                     buttonColor: Colors.green,
@@ -35,7 +35,7 @@ class LoginViewBodyW extends StatelessWidget {
                     actionText: '',
                     forgetPasswordOnPressed: () {},
                     onPressed: () {},
-                    thirdText: 'Create Account',
+                    thirdText: 'Create Account Now',
                     beforeThirdText: 'Don\'t have an account?',
                     thirdTextOnPressed: () {},
                   ),

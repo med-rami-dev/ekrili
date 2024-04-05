@@ -25,13 +25,14 @@ class RegisterViewBodyW extends StatelessWidget {
                 children: [
                   SizedBox(height: ScreenSize.screenHeight * 0.15),
                   LoginRegisterW(
-                    formTitle: 'Register',
-                    buttonText: 'Create Account',
-                    subButtonText: 'null text',
+                    formTitle: 'Create Account',
+                    buttonText: 'Sign Up',
                     isRegister: true,
                     buttonColor: Colors.green,
-                    emailController: TextEditingController(),
-                    passwordController: TextEditingController(),
+                    emailController:
+                        TextEditingController(), // ? Change This With Your email Controller
+                    passwordController:
+                        TextEditingController(), // ? Change This With Your Password Controller
                     actionText: '',
                     forgetPasswordOnPressed: () {},
                     onPressed: () {},
