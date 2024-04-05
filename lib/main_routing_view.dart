@@ -27,11 +27,14 @@ class _MainRoutingViewState extends State<MainRoutingView> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+        padding: const EdgeInsets.symmetric(
+          horizontal: 15,
+          vertical: 5,
+        ),
         child: GNav(
           gap: 8,
           activeColor: Colors.green,
-          tabBackgroundColor: const Color.fromARGB(255, 202, 199, 199),
+          tabBackgroundColor: const Color.fromARGB(255, 235, 229, 229),
           padding: const EdgeInsets.all(15),
           duration: const Duration(milliseconds: 350),
           onTabChange: (index) {
