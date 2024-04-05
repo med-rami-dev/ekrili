@@ -8,11 +8,10 @@ class CustomTextField extends StatefulWidget {
     required this.controller,
     required this.isPassword,
     required this.keyboardType,
-    required this.isSearch,
+    required this.displayIcon,
     this.focusBorder,
     this.enableBorder,
     this.padding,
-    required this.onChanged,
     this.onSubmitted,
     required this.prefixIcon,
   });
@@ -20,12 +19,11 @@ class CustomTextField extends StatefulWidget {
   TextEditingController controller = TextEditingController();
   final bool isPassword;
   final TextInputType keyboardType;
-  final bool isSearch;
+  final bool displayIcon;
   InputBorder? focusBorder;
   InputBorder? enableBorder;
   final EdgeInsets? padding;
   final Widget prefixIcon;
-  final Function(String) onChanged;
   final Function(String)? onSubmitted;
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
@@ -33,7 +31,7 @@ class CustomTextField extends StatefulWidget {
 
 class _CustomTextFieldState extends State<CustomTextField> {
   bool isObscure = false;
-
+  bool isEditing = false;
   @override
   void initState() {
     super.initState();
@@ -57,11 +55,15 @@ class _CustomTextFieldState extends State<CustomTextField> {
         autofocus: false,
         obscureText: widget.isPassword ? isObscure : false,
         controller: widget.controller,
-        onChanged: widget.onChanged,
         style: const TextStyle(
           color: Colors.black,
         ),
         onFieldSubmitted: widget.onSubmitted,
+        onChanged: (value) {
+          setState(() {
+            isEditing = true;
+          });
+        },
         decoration: InputDecoration(
           hintText: widget.labelText,
           hintStyle: const TextStyle(
@@ -70,13 +72,13 @@ class _CustomTextFieldState extends State<CustomTextField> {
           focusedBorder: widget.focusBorder,
           enabledBorder: widget.enableBorder,
           contentPadding: widget.padding,
-          prefixIcon: widget.isSearch
+          prefixIcon: widget.displayIcon
               ? Padding(
                   padding: const EdgeInsets.only(left: 5),
                   child: widget.prefixIcon,
                 )
               : null,
-          suffixIcon: widget.isPassword
+          suffixIcon: widget.isPassword && isEditing
               ? IconButton(
                   color: const Color.fromARGB(255, 129, 129, 129),
                   icon: isObscure

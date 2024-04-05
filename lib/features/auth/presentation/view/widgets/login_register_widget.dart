@@ -82,8 +82,7 @@ class _LoginRegisterWState extends State<LoginRegisterW> {
                           widget.userNameController ?? TextEditingController(),
                       isPassword: false,
                       keyboardType: TextInputType.text,
-                      isSearch: true,
-                      onChanged: (value) {},
+                      displayIcon: true,
                     ))
                 : const SizedBox(),
             const SizedBox(height: 20),
@@ -97,8 +96,7 @@ class _LoginRegisterWState extends State<LoginRegisterW> {
                   controller: widget.emailController,
                   isPassword: false,
                   keyboardType: TextInputType.text,
-                  isSearch: true,
-                  onChanged: (value) {},
+                  displayIcon: true,
                 )),
             const SizedBox(height: 20),
             Padding(
@@ -111,8 +109,7 @@ class _LoginRegisterWState extends State<LoginRegisterW> {
                   enableBorder: InputBorder.none,
                   focusBorder: InputBorder.none,
                   keyboardType: TextInputType.text,
-                  isSearch: true,
-                  onChanged: (value) {},
+                  displayIcon: true,
                 )),
             widget.isRegister
                 ? const SizedBox()
