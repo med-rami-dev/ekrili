@@ -43,7 +43,6 @@ class LoginRegisterW extends StatefulWidget {
 class _LoginRegisterWState extends State<LoginRegisterW> {
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     widget.emailController.dispose();
     widget.passwordController.dispose();
