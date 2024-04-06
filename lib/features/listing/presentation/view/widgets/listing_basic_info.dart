@@ -4,7 +4,7 @@ class ListingBasicInfo extends StatelessWidget {
   const ListingBasicInfo({super.key});
   /*
   * This widget is responsible for displaying the basic information about the listing
-  * like the name of the Listing and the location of the Listing and the rating of this Renter
+  * like the name of the Listing and the location of the Listing and the rating of this Renter and the price of this Listing
   */
   @override
   Widget build(BuildContext context) {
@@ -56,10 +56,18 @@ class ListingBasicInfo extends StatelessWidget {
                           )),
                       SizedBox(width: 5),
                       Text(
+                        "Price: ",
+                        style: TextStyle(
+                          color: Colors.black54,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      Text(
                         "4500 DZD",
                         style: TextStyle(
                           color: Colors.black,
-                          fontSize: 15.5,
+                          fontSize: 16,
                           fontWeight: FontWeight.w500,
                         ),
                       )

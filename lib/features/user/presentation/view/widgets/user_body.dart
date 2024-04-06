@@ -23,7 +23,7 @@ class UserViewBodyW extends StatelessWidget {
                     color: Colors.white,
                   ),
                   child: Image.network(
-                    'https://randomuser.me/api/portraits/men/56.jpg',
+                    'https://randomuser.me/api/portraits/men/32.jpg',
                     fit: BoxFit.cover,
                   )),
             ),

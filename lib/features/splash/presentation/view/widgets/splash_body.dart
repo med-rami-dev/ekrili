@@ -19,7 +19,6 @@ class _SplashBodyWState extends State<SplashBodyW>
   @override
   void initState() {
     super.initState();
-
     Timer(const Duration(seconds: 3), () {
       GoRouter.of(context).go(AppRouter.mainRoutingView);
     });

@@ -35,7 +35,7 @@ class BottomSection extends StatelessWidget {
                       )),
                 ],
               ),
-              Image.asset(AssetsPaths.groupDots2)
+              Image.asset(AssetsPaths.groupDots2, width: 290),
             ],
           )
         ],
