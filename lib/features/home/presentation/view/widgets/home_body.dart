@@ -1,3 +1,4 @@
+import 'package:ekrili/constants.dart';
 import 'package:ekrili/features/home/presentation/view/widgets/custom_app_bar.dart';
 import 'package:ekrili/features/home/presentation/view/widgets/single_category.dart';
 import 'package:ekrili/features/home/presentation/view/widgets/single_product.dart';
@@ -13,9 +14,9 @@ class HomeViewBodyW extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const CustomAppBar(),
-        const SizedBox(height: 20),
+        const SizedBox(height: kPrimaryHeightBetweenW),
         const CategoriesListW(),
-        const SizedBox(height: 20),
+        const SizedBox(height: kPrimaryHeightBetweenW),
         const Padding(
           padding: EdgeInsets.symmetric(horizontal: 8.0),
           child: Text(

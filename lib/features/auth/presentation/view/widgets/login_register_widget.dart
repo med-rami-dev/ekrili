@@ -1,3 +1,4 @@
+import 'package:ekrili/constants.dart';
 import 'package:ekrili/core/widgets/custom_button.dart';
 import 'package:ekrili/features/auth/presentation/view/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
@@ -60,7 +61,7 @@ class _LoginRegisterWState extends State<LoginRegisterW> {
         color: Colors.white,
         child: Column(
           children: [
-            const SizedBox(height: 20),
+            const SizedBox(height: kPrimaryHeightBetweenW),
             Text(
               widget.formTitle,
               style: const TextStyle(
@@ -68,7 +69,7 @@ class _LoginRegisterWState extends State<LoginRegisterW> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: kPrimaryHeightBetweenW),
             widget.isRegister
                 ? Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -84,7 +85,7 @@ class _LoginRegisterWState extends State<LoginRegisterW> {
                       displayIcon: true,
                     ))
                 : const SizedBox(),
-            const SizedBox(height: 20),
+            const SizedBox(height: kPrimaryHeightBetweenW),
             Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: CustomTextField(
@@ -97,7 +98,7 @@ class _LoginRegisterWState extends State<LoginRegisterW> {
                   keyboardType: TextInputType.text,
                   displayIcon: true,
                 )),
-            const SizedBox(height: 20),
+            const SizedBox(height: kPrimaryHeightBetweenW),
             Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: CustomTextField(
@@ -125,12 +126,12 @@ class _LoginRegisterWState extends State<LoginRegisterW> {
                       ),
                     ],
                   ),
-            const SizedBox(height: 20),
+            const SizedBox(height: kPrimaryHeightBetweenW),
             CustomButton(
                 onPressed: widget.onPressed,
                 text: widget.buttonText,
                 color: widget.buttonColor),
-            const SizedBox(height: 20),
+            const SizedBox(height: kPrimaryHeightBetweenW),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -144,7 +145,7 @@ class _LoginRegisterWState extends State<LoginRegisterW> {
                 ),
               ],
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: kPrimaryHeightBetweenW),
           ],
         ),
       ),

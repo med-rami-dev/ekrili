@@ -18,7 +18,7 @@ class _MainRoutingViewState extends State<MainRoutingView> {
     const HomeView(),
     const SearchView(),
     const ListingDetailsView(),
-    const UserView()
+    const UserView(),
   ];
   @override
   Widget build(BuildContext context) {

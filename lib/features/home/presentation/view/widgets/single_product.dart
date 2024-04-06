@@ -1,4 +1,6 @@
+import 'package:ekrili/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class SingleProduct extends StatelessWidget {
   const SingleProduct({super.key});
@@ -7,7 +9,7 @@ class SingleProduct extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        //? On Tap Functionality Here (Navigate to Product Details Page)
+        context.push(AppRouter.listingDetails);
       },
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
