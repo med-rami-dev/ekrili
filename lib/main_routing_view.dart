@@ -1,4 +1,7 @@
 import 'package:ekrili/features/home/presentation/view/home_view.dart';
+import 'package:ekrili/features/listing/presentation/view/listing_details_view.dart';
+import 'package:ekrili/features/search/presentation/view/search_view.dart';
+import 'package:ekrili/features/user/presentation/view/user_view.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
@@ -13,15 +16,9 @@ class _MainRoutingViewState extends State<MainRoutingView> {
   int selectedIndex = 0;
   List<Widget> screens = <Widget>[
     const HomeView(),
-    const Center(
-      child: Text('Search'),
-    ),
-    const Center(
-      child: Text('Process'),
-    ),
-    const Center(
-      child: Text('Profile'),
-    ),
+    const SearchView(),
+    const ListingDetailsView(),
+    const UserView()
   ];
   @override
   Widget build(BuildContext context) {

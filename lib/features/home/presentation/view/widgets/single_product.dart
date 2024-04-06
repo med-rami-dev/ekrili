@@ -22,7 +22,7 @@ class SingleProduct extends StatelessWidget {
             ),
             Container(
               height: 120,
-              width: 150,
+              width: 130,
               clipBehavior: Clip.antiAlias,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
@@ -39,10 +39,11 @@ class SingleProduct extends StatelessWidget {
               child: Text(
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
-                'Audi RS6 2024',
+                'Audi RS6',
                 style: TextStyle(
                   fontSize: 16,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w600,
+                  fontFamily: "Poppins-Regular",
                 ),
               ),
             ),
@@ -50,9 +51,9 @@ class SingleProduct extends StatelessWidget {
             const Text(
               '4500 DZD/24H',
               style: TextStyle(
-                  fontSize: 14,
+                  fontSize: 13,
                   fontWeight: FontWeight.w600,
-                  color: Colors.green,
+                  color: Colors.black45,
                   fontFamily: "Poppins-Regular"),
             ),
           ],
