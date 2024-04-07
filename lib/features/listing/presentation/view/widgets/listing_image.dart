@@ -1,4 +1,5 @@
 import 'package:ekrili/core/utils/screen_size.dart';
+import 'package:ekrili/core/widgets/back_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_carousel_widget/flutter_carousel_widget.dart';
 
@@ -16,20 +17,28 @@ class ListingImage extends StatelessWidget {
         "https://static.cargurus.com/images/forsale/2024/03/28/16/29/2023_audi_rs_6_avant-pic-9185322910748453575-1024x768.jpeg";
     String imageUrl5 =
         "https://static.cargurus.com/images/forsale/2024/03/28/16/29/2023_audi_rs_6_avant-pic-5951578356359736422-1024x768.jpeg?io=true&format=pjpg&auto=webp&width=640";
-    return FlutterCarousel(
-        items: [
-          Image.network(imageUrl1),
-          Image.network(imageUrl2),
-          Image.network(imageUrl3),
-          Image.network(imageUrl4),
-          Image.network(imageUrl5),
-        ],
-        options: CarouselOptions(
-          showIndicator: false,
-          autoPlay: true,
-          height: ScreenSize.screenHeight * 0.34,
-          viewportFraction: 1,
-          aspectRatio: 16 / 9,
-        ));
+    return Stack(children: [
+      FlutterCarousel(
+          items: [
+            Image.network(imageUrl1),
+            Image.network(imageUrl2),
+            Image.network(imageUrl3),
+            Image.network(imageUrl4),
+            Image.network(imageUrl5),
+          ],
+          options: CarouselOptions(
+            showIndicator: false,
+            autoPlay: true,
+            height: ScreenSize.screenHeight * 0.34,
+            viewportFraction: 1,
+            aspectRatio: 16 / 9,
+          )),
+      ArrowBackButton(
+        icon: const Icon(Icons.arrow_back_ios),
+        onPressed: () {
+          Navigator.pop(context);
+        },
+      ),
+    ]);
   }
 }

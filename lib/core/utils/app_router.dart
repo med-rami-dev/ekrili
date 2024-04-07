@@ -1,6 +1,5 @@
 import 'package:ekrili/features/auth/presentation/view/login_view.dart';
 import 'package:ekrili/features/auth/presentation/view/register_view.dart';
-import 'package:ekrili/features/home/presentation/view/home_view.dart';
 import 'package:ekrili/features/listing/presentation/view/listing_details_view.dart';
 import 'package:ekrili/features/splash/presentation/view/splash_view.dart';
 import 'package:ekrili/main_routing_view.dart';

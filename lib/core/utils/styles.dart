@@ -12,13 +12,11 @@ abstract class Styles {
   );
 
   static const TextStyle textStyle14 = TextStyle(
-    fontSize: 14,
-    fontWeight: FontWeight.normal,
-  );
+      fontSize: 14, fontWeight: FontWeight.w500, fontFamily: "Poppins");
   static const TextStyle textStyle16 = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.w500,
   );
   static const TextStyle textStyle30 = TextStyle(
-      fontSize: 36, fontWeight: FontWeight.w600, fontFamily: "Inter-Regular");
+      fontSize: 36, fontWeight: FontWeight.w600, fontFamily: "Poppins");
 }

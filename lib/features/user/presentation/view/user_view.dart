@@ -1,3 +1,6 @@
+import 'package:ekrili/core/utils/styles.dart';
+import 'package:ekrili/features/user/presentation/view/widgets/logout_button_with_dialog.dart';
+import 'package:ekrili/features/user/presentation/view/widgets/swap_account_button.dart';
 import 'package:ekrili/features/user/presentation/view/widgets/user_body.dart';
 import 'package:flutter/material.dart';
 
@@ -7,54 +10,31 @@ class UserView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.logout),
-            onPressed: () {
-              showDialog(
-                context: context,
-                builder: (BuildContext context) {
-                  return AlertDialog(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)),
-                    title: const Text('Logout'),
-                    content: const Text('Are you sure you want to logout?'),
-                    actions: [
-                      TextButton(
-                        child: const Text('Cancel',
-                            style: TextStyle(
-                                color: Colors.black,
-                                letterSpacing: 1,
-                                fontSize: 13,
-                                fontWeight: FontWeight.w600,
-                                fontFamily: 'Poppins-Regular')),
-                        onPressed: () {
-                          Navigator.of(context).pop();
-                        },
-                      ),
-                      TextButton(
-                        child: const Text('Logout',
-                            style: TextStyle(
-                                color: Colors.red,
-                                letterSpacing: 1,
-                                fontSize: 13,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Poppins-Regular')),
-                        onPressed: () {
-                          //? Perform logout logic here
-                          Navigator.of(context).pop();
-                        },
-                      ),
-                    ],
-                  );
-                },
-              );
-            },
-          ),
+        body: CustomScrollView(slivers: [
+      SliverAppBar(
+        title: Text(
+          'Profile',
+          style: Styles.textStyle14.copyWith(
+              color: Colors.black,
+              letterSpacing: 1,
+              fontSize: 17,
+              fontWeight: FontWeight.w600,
+              fontFamily: 'Poppins-Regular'),
+        ),
+        centerTitle: true,
+        leading: const SwapAccountButton(),
+        actions: const [
+          LogoutButtonWithDialog(),
         ],
+        backgroundColor: Colors.white,
+        expandedHeight: 55.0,
+        floating: false,
+        pinned: false,
       ),
-      body: const UserViewBodyW(),
-    );
+      SliverList(
+          delegate: SliverChildListDelegate([
+        const UserViewBodyW(),
+      ]))
+    ]));
   }
 }

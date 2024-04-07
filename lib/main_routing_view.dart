@@ -1,5 +1,5 @@
 import 'package:ekrili/features/home/presentation/view/home_view.dart';
-import 'package:ekrili/features/listing/presentation/view/listing_details_view.dart';
+import 'package:ekrili/features/process/presentation/view/rent_in_process_view.dart';
 import 'package:ekrili/features/search/presentation/view/search_view.dart';
 import 'package:ekrili/features/user/presentation/view/user_view.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +17,7 @@ class _MainRoutingViewState extends State<MainRoutingView> {
   List<Widget> screens = <Widget>[
     const HomeView(),
     const SearchView(),
-    const ListingDetailsView(),
+    const RentInProcess(),
     const UserView(),
   ];
   @override

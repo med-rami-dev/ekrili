@@ -73,6 +73,6 @@ flutter:
     - family: BungeeShade
       fonts:
         - asset: assets/fonts/BungeeShade-Regular.ttf
-    - family: Poppins-Regular
+    - family: Poppins
       fonts:
         - asset: assets/fonts/Poppins-Regular.ttf
