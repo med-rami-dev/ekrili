@@ -29,11 +29,12 @@ class SingleProduct extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
                 color: Colors.white,
+                image: const DecorationImage(
+                    image: NetworkImage(
+                        'https://media.ed.edmunds-media.com/audi/rs-6/2024/oem/2024_audi_rs-6_wagon_performance_fq_oem_1_815.jpg'),
+                    fit: BoxFit.fill),
               ),
-              child: Image.network(
-                'https://media.ed.edmunds-media.com/audi/rs-6/2024/oem/2024_audi_rs-6_wagon_performance_fq_oem_1_815.jpg',
-                fit: BoxFit.fill,
-              ),
+              child: null,
             ),
             const SizedBox(height: 10),
             const Padding(
