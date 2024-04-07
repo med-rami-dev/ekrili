@@ -14,7 +14,7 @@ class SingleRentInProcess extends StatelessWidget {
       child: Container(
         margin: const EdgeInsets.all(10),
         decoration: BoxDecoration(
-          border: Border.all(color: Colors.grey),
+          color: Colors.grey[200],
           borderRadius: BorderRadius.circular(10),
         ),
         child: Row(

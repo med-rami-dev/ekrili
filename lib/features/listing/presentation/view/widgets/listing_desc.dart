@@ -29,7 +29,7 @@ class ListingDescription extends StatelessWidget {
             trimCollapsedText: 'Read more',
             trimExpandedText: 'Read less',
             trimLines: 3,
-            "The Audi RS 6 Avant is a high-performance wagon that is based on the A6 Avant. It is powered by a 4.0-liter V-8 engine that produces 591 horsepower and 590 lb-ft of torque. The RS 6 Avant is equipped with an eight-speed automatic transmission and all-wheel drive. It has a top speed of 190 mph and can accelerate from 0 to 60 mph in 3.5 seconds.",
+            kCarDescription,
             style: TextStyle(
               fontSize: 16,
               color: Colors.grey,
@@ -40,6 +40,7 @@ class ListingDescription extends StatelessWidget {
             ),
           ),
         ),
+        SizedBox(height: kPrimaryHeightBetweenW),
       ],
     );
   }

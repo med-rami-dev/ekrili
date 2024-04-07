@@ -1,3 +1,4 @@
+import 'package:ekrili/core/widgets/custom_button.dart';
 import 'package:ekrili/features/listing/presentation/view/widgets/listing_basic_info.dart';
 import 'package:ekrili/features/listing/presentation/view/widgets/listing_desc.dart';
 import 'package:ekrili/features/listing/presentation/view/widgets/listing_image.dart';
@@ -21,6 +22,19 @@ class ListingDetailsBodyW extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+class SendRentRequest extends StatelessWidget {
+  const SendRentRequest({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return CustomButton(
+      onPressed: () {},
+      text: 'Send Rent Request',
+      color: const Color.fromARGB(255, 40, 133, 43),
     );
   }
 }

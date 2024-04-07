@@ -6,8 +6,11 @@ class RentInProcess extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: RentInProcessBodyW(),
+    return const DefaultTabController(
+      length: 2,
+      child: Scaffold(
+        body: RentInProcessBodyW(),
+      ),
     );
   }
 }

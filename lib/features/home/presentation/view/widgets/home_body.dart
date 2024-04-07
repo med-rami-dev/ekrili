@@ -1,7 +1,7 @@
 import 'package:ekrili/constants.dart';
 import 'package:ekrili/features/home/presentation/view/widgets/custom_app_bar.dart';
 import 'package:ekrili/features/home/presentation/view/widgets/single_category.dart';
-import 'package:ekrili/features/home/presentation/view/widgets/single_product.dart';
+import 'package:ekrili/features/listing/presentation/view/widgets/single_product.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable

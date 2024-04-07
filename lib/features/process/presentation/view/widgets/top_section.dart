@@ -20,9 +20,9 @@ class TopSectionInProcess extends StatelessWidget {
       child: Align(
           alignment: Alignment.center,
           child: Text(
-            'Rent in Process',
+            'Rents OverView',
             style: Styles.textStyle30.copyWith(
-                fontSize: 20, letterSpacing: 1.8, color: Colors.white),
+                fontSize: 18, letterSpacing: 1.8, color: Colors.white),
           )),
     );
   }

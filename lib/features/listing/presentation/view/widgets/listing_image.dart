@@ -29,12 +29,12 @@ class ListingImage extends StatelessWidget {
           options: CarouselOptions(
             showIndicator: false,
             autoPlay: true,
-            height: ScreenSize.screenHeight * 0.34,
-            viewportFraction: 1,
+            height: ScreenSize.screenHeight * 0.335,
+            viewportFraction: 1.1,
             aspectRatio: 16 / 9,
           )),
       Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 5),
+        padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 8),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

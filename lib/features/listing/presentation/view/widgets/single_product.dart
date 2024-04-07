@@ -1,4 +1,5 @@
 import 'package:ekrili/core/utils/app_router.dart';
+import 'package:ekrili/core/utils/screen_size.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -19,17 +20,16 @@ class SingleProduct extends StatelessWidget {
         ),
         child: Column(
           children: [
-            const SizedBox(
-              height: 15,
-            ),
             Container(
-              height: 120,
-              width: 130,
+              height: ScreenSize.screenHeight * 0.18,
+              width: double.infinity,
               clipBehavior: Clip.antiAlias,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(10),
+                    topRight: Radius.circular(10)),
                 color: Colors.white,
-                image: const DecorationImage(
+                image: DecorationImage(
                     image: NetworkImage(
                         'https://media.ed.edmunds-media.com/audi/rs-6/2024/oem/2024_audi_rs-6_wagon_performance_fq_oem_1_815.jpg'),
                     fit: BoxFit.fill),
@@ -42,11 +42,11 @@ class SingleProduct extends StatelessWidget {
               child: Text(
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
-                'Audi RS6',
+                'Audi RS6 Avant 2023',
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 14,
                   fontWeight: FontWeight.w600,
-                  fontFamily: "Poppins-Regular",
+                  fontFamily: "Inter-Regular",
                 ),
               ),
             ),
@@ -57,7 +57,7 @@ class SingleProduct extends StatelessWidget {
                   fontSize: 13,
                   fontWeight: FontWeight.w600,
                   color: Colors.black45,
-                  fontFamily: "Poppins-Regular"),
+                  fontFamily: "Inter-Regular"),
             ),
           ],
         ),

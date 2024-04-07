@@ -7,6 +7,10 @@ class ListingDetailsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
+      bottomSheet: Padding(
+        padding: EdgeInsets.all(10.0),
+        child: SizedBox(width: double.infinity, child: SendRentRequest()),
+      ),
       body: ListingDetailsBodyW(),
     );
   }

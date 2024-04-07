@@ -22,7 +22,7 @@ class UserView extends StatelessWidget {
               fontFamily: 'Poppins-Regular'),
         ),
         centerTitle: true,
-        leading: const SwapAccountButton(),
+        leading: const SwitchAccountButton(),
         actions: const [
           LogoutButtonWithDialog(),
         ],

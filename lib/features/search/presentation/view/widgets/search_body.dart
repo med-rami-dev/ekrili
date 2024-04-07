@@ -1,6 +1,6 @@
 import 'package:ekrili/constants.dart';
 import 'package:ekrili/features/auth/presentation/view/widgets/custom_text_field.dart';
-import 'package:ekrili/features/home/presentation/view/widgets/single_product.dart';
+import 'package:ekrili/features/listing/presentation/view/widgets/single_product.dart';
 import 'package:flutter/material.dart';
 
 class SearchViewBodyW extends StatelessWidget {

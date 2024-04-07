@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class SwapAccountButton extends StatelessWidget {
-  const SwapAccountButton({
+class SwitchAccountButton extends StatelessWidget {
+  const SwitchAccountButton({
     super.key,
   });
 
@@ -16,9 +16,9 @@ class SwapAccountButton extends StatelessWidget {
             return AlertDialog(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10)),
-              title: const Text('Swap Account'),
+              title: const Text('Switch Account'),
               content: const Text(
-                  'Are you sure you want to Swap Your Account To Renter?'),
+                  'Are you sure you want to Switch Your Account To Renter?'),
               actions: [
                 TextButton(
                   child: const Text('Cancel',
@@ -33,7 +33,7 @@ class SwapAccountButton extends StatelessWidget {
                   },
                 ),
                 TextButton(
-                  child: const Text('Swap Account',
+                  child: const Text('Switch Account',
                       style: TextStyle(
                           color: Colors.green,
                           letterSpacing: 1,
