@@ -33,11 +33,23 @@ class ListingImage extends StatelessWidget {
             viewportFraction: 1,
             aspectRatio: 16 / 9,
           )),
-      ArrowBackButton(
-        icon: const Icon(Icons.arrow_back_ios),
-        onPressed: () {
-          Navigator.pop(context);
-        },
+      Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 5),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            ArrowBackButton(
+              icon: const Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
+            ArrowBackButton(
+              icon: const Icon(Icons.ios_share_rounded),
+              onPressed: () {},
+            ),
+          ],
+        ),
       ),
     ]);
   }
