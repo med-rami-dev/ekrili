@@ -1,5 +1,6 @@
 import 'package:ekrili/features/auth/presentation/view/login_view.dart';
 import 'package:ekrili/features/auth/presentation/view/register_view.dart';
+import 'package:ekrili/features/auth/presentation/view/reset_password_view.dart';
 import 'package:ekrili/features/listing/presentation/view/listing_details_view.dart';
 import 'package:ekrili/features/splash/presentation/view/splash_view.dart';
 import 'package:ekrili/main_routing_view.dart';
@@ -15,7 +16,7 @@ abstract class AppRouter {
   static const registerView = '/auth/register';
   static const searchView = '/searchView';
   static const listingDetails = '/listingDetailsView';
-
+  static const forgetPasswordView = '/forgetPasswordView';
   //? private Navigators Keys:
   static final _rootNavigatorKey = GlobalKey<NavigatorState>();
 
@@ -48,6 +49,11 @@ abstract class AppRouter {
           path: listingDetails,
           pageBuilder: (context, state) =>
               const MaterialPage(child: ListingDetailsView()),
+        ),
+        GoRoute(
+          path: forgetPasswordView,
+          pageBuilder: (context, state) =>
+              const MaterialPage(child: ResetPasswordView()),
         ),
       ]);
 }

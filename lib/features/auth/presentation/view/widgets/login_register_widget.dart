@@ -20,7 +20,8 @@ class LoginRegisterW extends StatefulWidget {
       this.forgetPasswordOnPressed,
       required this.thirdText,
       required this.beforeThirdText,
-      required this.thirdTextOnPressed});
+      required this.thirdTextOnPressed,
+      this.phoneNumberController});
   final String formTitle;
   final String beforeThirdText;
   final String thirdText;
@@ -35,8 +36,8 @@ class LoginRegisterW extends StatefulWidget {
   Color buttonColor;
   final TextEditingController emailController;
   final TextEditingController passwordController;
-  late TextEditingController? userNameController;
-
+  final TextEditingController? userNameController;
+  final TextEditingController? phoneNumberController;
   @override
   State<LoginRegisterW> createState() => _LoginRegisterWState();
 }
@@ -71,19 +72,37 @@ class _LoginRegisterWState extends State<LoginRegisterW> {
             ),
             const SizedBox(height: kPrimaryHeightBetweenW),
             widget.isRegister
-                ? Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: CustomTextField(
-                      prefixIcon: const Icon(Icons.person),
-                      labelText: 'User Name',
-                      enableBorder: InputBorder.none,
-                      focusBorder: InputBorder.none,
-                      controller:
-                          widget.userNameController ?? TextEditingController(),
-                      isPassword: false,
-                      keyboardType: TextInputType.text,
-                      displayIcon: true,
-                    ))
+                ? Column(
+                    children: [
+                      Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 20),
+                          child: CustomTextField(
+                            prefixIcon: const Icon(Icons.person),
+                            labelText: 'User Name',
+                            enableBorder: InputBorder.none,
+                            focusBorder: InputBorder.none,
+                            controller: widget.userNameController ??
+                                TextEditingController(),
+                            isPassword: false,
+                            keyboardType: TextInputType.text,
+                            displayIcon: true,
+                          )),
+                      const SizedBox(height: kPrimaryHeightBetweenW),
+                      Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 20),
+                          child: CustomTextField(
+                            prefixIcon: const Icon(Icons.phone),
+                            labelText: 'Phone Number',
+                            enableBorder: InputBorder.none,
+                            focusBorder: InputBorder.none,
+                            controller: widget.phoneNumberController ??
+                                TextEditingController(),
+                            isPassword: false,
+                            keyboardType: TextInputType.text,
+                            displayIcon: true,
+                          )),
+                    ],
+                  )
                 : const SizedBox(),
             const SizedBox(height: kPrimaryHeightBetweenW),
             Padding(
